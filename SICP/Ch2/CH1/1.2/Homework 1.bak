@@ -1,0 +1,10 @@
+#lang simply-scheme
+;Homework 1
+
+;Question 2
+
+(define (squares nums)
+  (if (empty? nums)
+      '()
+      (se (square (first nums))
+          (squares (bf nums)))))
