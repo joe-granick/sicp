@@ -1,0 +1,9 @@
+#lang simply-scheme
+(define (squares nums)
+  (if(empty? nums)
+     '()
+     (se(*(first nums) (first nums)) (squares (bf nums)))))
+(squares '(1 2 3 4 5 6))
+
+(define (switch sent)
+  

@@ -1,0 +1,11 @@
+#lang simply-scheme
+(define (simpson-integral f a b n)
+  (let ((h (/ (- b a) n)))
+    (define (term k)  
+      (let ((y (f (+ a (* k h)))))
+        (cond ((or (zero? k)
+                   (= k n)) y)
+              ((even? k) (* 2 y))
+              (else (* 4 y)))))
+    (* (/ h 3)
+       (sum term 0 inc n))))

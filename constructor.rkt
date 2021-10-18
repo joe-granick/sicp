@@ -1,0 +1,15 @@
+(define make-segment cons)
+(define segment-start car)
+(define segment-end cdr)
+
+(define make-point cons)
+(define x-point car)
+(define y-point cdr)
+
+(define(segment-midpoint segment)
+(let((x1(x-point(segment-start segment)))
+    (x2(x-point(segment-end segment)))
+    (y1(y-point(segment-start segment)))
+    (y2(y-point(segment-end segment))))
+(make-point(/(+x1x2)2.0)
+         (/(+y1y2)2.0))))

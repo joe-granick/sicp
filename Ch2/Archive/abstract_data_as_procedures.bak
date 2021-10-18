@@ -1,0 +1,6 @@
+#lang racket
+
+(define (cons a b)
+(lambda (pick)
+  (cond ((= pick 1) a)
+        ((= pick 2) b))))
